@@ -23,13 +23,13 @@ TEST(TicTacToeBoardTest, unitTestName)
 
 TEST(TicTacBoardTest, toggleTurnO)
 {
-	TicTacToeBoard ticTacToeBoad;
+	TicTacToeBoard ticTacToeBoard;
 	ASSERT_EQ( ticTacToeBoard.toggleTurn(), O);
 }
 
 TEST(TicTacBoardTest, toggleTurnX)
 {
-	TicTacToeBoard ticTacToeBoad;
+	TicTacToeBoard ticTacToeBoard;
 	ticTacToeBoard.toggleTurn();
 	ASSERT_EQ( ticTacToeBoard.toggleTurn(), X);
 }
