@@ -37,13 +37,13 @@ Piece TicTacToeBoard::toggleTurn()
 **/ 
 Piece TicTacToeBoard::placePiece(int row, int column)
 {
-  Piece temp = X;
-  if (row == Blank && column == Blank)
+  Piece temp = turn;
+  if (board[row][column] == Blank)
   {
     board[row][column] = turn;
     temp = turn;
   }
-  else if (row != Invalid && column != Invalid)
+  else if (board[row][column] != Invalid)
     temp = board[row][column];
   else
     temp = Invalid;
