@@ -45,7 +45,7 @@ Piece TicTacToeBoard::placePiece(int row, int column)
   }
   else if (board[row][column] != Invalid)
     temp = board[row][column];
-  else
+  else if (row < 0 || row > 2 || column > 2 || column < 0)
     temp = Invalid;
   toggleTurn();
   return temp;
