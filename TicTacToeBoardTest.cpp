@@ -66,7 +66,7 @@ TEST(TicTacBoardTest, placePieceInvalid)
 	ASSERT_EQ( ticTacToeBoard.placePiece(3,3), Invalid);
 }
 //Placing an O where an X is already, should get back what the original piece was.
-TEST(TicTacBoardTest, placePieceInvalid)
+TEST(TicTacBoardTest, placePieceExisting)
 {
 	TicTacToeBoard ticTacToeBoard;
 	ticTacToeBoard.placePiece(1,1);
