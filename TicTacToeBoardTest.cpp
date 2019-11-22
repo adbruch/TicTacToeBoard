@@ -129,7 +129,7 @@ TEST(TicTacBoardTest, WinnerX)
 	ticTacToeBoard.placePiece(0,0); //X in upper left corner
 	ticTacToeBoard.placePiece(1,1);
 	ticTacToeBoard.placePiece(0,1); //X in middle left
-	ticTacToeBoard.placePiece(1,1);
+	ticTacToeBoard.placePiece(2,2);
 	ticTacToeBoard.placePiece(0,2); //X in the bottom left
 	ASSERT_EQ( ticTacToeBoard.getWinner(), X);
 }
