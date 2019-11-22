@@ -76,10 +76,7 @@ Piece TicTacToeBoard::getPiece(int row, int column)
  * is not over, or Blank if the board is filled and no one has won.
 **/
 Piece TicTacToeBoard::getWinner()
-{
-  Piece winner = Blank;
-  //Check if game is over or not.
-  
+{  
   //vertical wins
   if (board[0][0] == board[0][1] && board[0][1] == board[0][2])
     return board[0][0];
@@ -101,8 +98,13 @@ Piece TicTacToeBoard::getWinner()
     return board[0][2];
   
   for(int i=0; i<BOARDSIZE; i++)
+  {
     for(int j=0; j<BOARDSIZE; j++)
+    {
       if (board[i][j] == Blank)
-        return Invalid;  
-  return winner;
+        return Invalid; 
+    }
+  }
+
+  return Blank;
 }
