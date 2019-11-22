@@ -106,7 +106,7 @@ TEST(TicTacBoardTest, getPieceCenterInvalid)
 	ASSERT_EQ( ticTacToeBoard.getPiece(3,-1), Invalid);
 }
 
-TEST(TicTacBoardTest, getPiece0_0X)
+TEST(TicTacBoardTest, getPiece2onBoardX)
 {
 	TicTacToeBoard ticTacToeBoard;
 	ticTacToeBoard.placePiece(0,0);
@@ -114,7 +114,7 @@ TEST(TicTacBoardTest, getPiece0_0X)
 	ASSERT_EQ( ticTacToeBoard.getPiece(0,0), X);
 }
 
-TEST(TicTacBoardTest, getPieceCenterX)
+TEST(TicTacBoardTest, getPiece2onBoardO)
 {
 	TicTacToeBoard ticTacToeBoard;
 	ticTacToeBoard.placePiece(0,0);
