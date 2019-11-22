@@ -83,27 +83,29 @@ Piece TicTacToeBoard::getWinner()
   //vertical wins
   if (board[0][0] == board[0][1] && board[0][1] == board[0][2])
     return board[0][0];
-  else if (board[1][0] == board[1][1] == board[1][2])
+  else if (board[1][0] == board[1][1] && board[1][1] == board[1][2])
     return board[1][0];
-  else if (board[2][0] == board[2][1] == board[2][2])
+  else if (board[2][0] == board[2][1] && board[2][1] == board[2][2])
     return board[2][0];
   //horizontal wins
-  else if (board[0][0] == board[1][0] == board[2][0])
+  else if (board[0][0] == board[1][0] && board[1][0]  == board[2][0])
     return board[0][0];
-  else if (board[0][1] == board[1][1] == board[2][1])
+  else if (board[0][1] == board[1][1] && board[1][1] == board[2][1])
     return board[0][1];
-  else if (board[0][2] == board[1][2] == board[2][2])
+  else if (board[0][2] == board[1][2] && board[1][2] == board[2][2])
     return board[0][2];
   //diagonal wins
-  else if (board[0][0] == board[1][1] == board[2][2])
+  else if (board[0][0] == board[1][1] && board[1][1]== board[2][2])
     return board[0][0];
-  else if (board[0][2] == board[1][1] == board[2][0])
+  else if (board[0][2] == board[1][1] && board[1][1] == board[2][0])
     return board[0][2];
   else
     return Blank;
+  
   for(int i=0; i<BOARDSIZE; i++)
     for(int j=0; j<BOARDSIZE; j++)
       if (board[i][j] == Blank)
         return Invalid;
+  
   return winner;
 }
