@@ -123,6 +123,24 @@ TEST(TicTacBoardTest, getPiece2onBoardO)
 }
 //-----------------------------------------------------------
 //getWinner tests
+TEST(TicTacBoardTest, WinnerX)
+{
+	TicTacToeBoard ticTacToeBoard;
+	ticTacToeBoard.placePiece(0,0); //X in upper left corner
+	ticTacToeBoard.placePiece(1,1);
+	ticTacToeBoard.placePiece(0,1); //X in middle left
+	ticTacToeBoard.placePiece(1,1);
+	ticTacToeBoard.placePiece(0,2); //X in the bottom left
+	ASSERT_EQ( ticTacToeBoard.getWinner(), X);
+}
 
-
-
+TEST(TicTacBoardTest, WinnerO)
+{
+	TicTacToeBoard ticTacToeBoard;
+	ticTacToeBoard.placePiece(1,1);
+	ticTacToeBoard.placePiece(0,0); //O in upper left corner
+	ticTacToeBoard.placePiece(1,1);
+	ticTacToeBoard.placePiece(0,1); //O in middle left	
+	ticTacToeBoard.placePiece(0,2); //O in the bottom left
+	ASSERT_EQ( ticTacToeBoard.getWinner(), O);
+}
