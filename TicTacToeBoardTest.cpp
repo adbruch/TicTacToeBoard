@@ -72,6 +72,18 @@ TEST(TicTacBoardTest, placePieceExisting)
 	ticTacToeBoard.placePiece(1,1);
 	ASSERT_EQ( ticTacToeBoard.placePiece(1,1), X);
 }
+
+TEST(TicTacBoardTest, placePieceWinner)
+{
+	TicTacToeBoard ticTacToeBoard;
+	ticTacToeBoard.placePiece(0,0);
+	ticTacToeBoard.placePiece(0,0);
+	ticTacToeBoard.placePiece(0,1);
+	ticTacToeBoard.placePiece(0,1);
+	ticTacToeBoard.placePiece(0,2);
+	ticTacToeBoard.placePiece(0,2);
+	ASSERT_EQ( ticTacToeBoard.placePiece(0,0), Invalid);
+}
 //-------------------------------------------------------------------------------------------------------
 //getPiece tests
 TEST(TicTacBoardTest, getPiece0_0Blank)
