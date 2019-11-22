@@ -33,7 +33,7 @@ TEST(TicTacBoardTest, toggleTurnX)
 	ticTacToeBoard.toggleTurn();
 	ASSERT_EQ( ticTacToeBoard.toggleTurn(), X);
 }
-//PlacingPieces test
+//PlacingPieces test-------------------------------------------------------------------------
 TEST(TicTacBoardTest, placePiece0_0X)
 {
 	TicTacToeBoard ticTacToeBoard;
@@ -72,3 +72,55 @@ TEST(TicTacBoardTest, placePieceExisting)
 	ticTacToeBoard.placePiece(1,1);
 	ASSERT_EQ( ticTacToeBoard.placePiece(1,1), X);
 }
+//-------------------------------------------------------------------------------------------------------
+//getPiece tests
+TEST(TicTacBoardTest, getPiece0_0X)
+{
+	TicTacToeBoard ticTacToeBoard;
+	ASSERT_EQ( ticTacToeBoard.getPiece(0,0), Blank);
+}
+
+TEST(TicTacBoardTest, getPieceCenterX)
+{
+	TicTacToeBoard ticTacToeBoard;
+	ASSERT_EQ( ticTacToeBoard.getPiece(1,1), Blank);
+}
+
+TEST(TicTacBoardTest, getPiece0_0O)
+{
+	TicTacToeBoard ticTacToeBoard;
+	ticTacToeBoard.placePiece(0,0);
+	ASSERT_EQ( ticTacToeBoard.getPiece(0,0), X);
+}
+
+TEST(TicTacBoardTest, getPieceCenterO)
+{
+	TicTacToeBoard ticTacToeBoard;
+	ticTacToeBoard.placePiece(1,1);
+	ASSERT_EQ( ticTacToeBoard.getPiece(1,1), X);
+}
+
+TEST(TicTacBoardTest, getPieceCenterInvalid)
+{
+	TicTacToeBoard ticTacToeBoard;
+	ASSERT_EQ( ticTacToeBoard.getPiece(3,-1), Invalid);
+}
+
+TEST(TicTacBoardTest, getPiece0_0X)
+{
+	TicTacToeBoard ticTacToeBoard;
+	ticTacToeBoard.placePiece(0,0);
+	ASSERT_EQ( ticTacToeBoard.getPiece(0,0), X);
+}
+
+TEST(TicTacBoardTest, getPieceCenterX)
+{
+	TicTacToeBoard ticTacToeBoard;
+	ticTacToeBoard.placePiece(0,0);
+	ASSERT_EQ( ticTacToeBoard.getPiece(0,0), X);
+}
+//-----------------------------------------------------------
+//getWinner tests
+
+
+
