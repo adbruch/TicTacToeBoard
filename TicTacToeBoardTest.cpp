@@ -146,6 +146,27 @@ TEST(TicTacBoardTest, WinnerO)
 	ASSERT_EQ( ticTacToeBoard.getWinner(), O);
 }
 
+TEST(TicTacBoardTest, VerticalWin)
+{
+	TicTacToeBoard ticTacToeBoard;
+	ticTacToeBoard.placePiece(0,0);
+	ticTacToeBoard.placePiece(0,0); //O in upper left corner
+	ticTacToeBoard.placePiece(1,0);
+	ticTacToeBoard.placePiece(0,1); //O in middle left	
+	ticTacToeBoard.placePiece(2,0);
+	ASSERT_EQ( ticTacToeBoard.getWinner(), X);
+}
+TEST(TicTacBoardTest, WinnerDiagonal)
+{
+	TicTacToeBoard ticTacToeBoard;
+	ticTacToeBoard.placePiece(0,0);
+	ticTacToeBoard.placePiece(0,0); //O in upper left corner
+	ticTacToeBoard.placePiece(1,1);
+	ticTacToeBoard.placePiece(0,1); //O in middle left	
+	ticTacToeBoard.placePiece(2,2);	
+	ASSERT_EQ( ticTacToeBoard.getWinner(), X);
+}
+
 TEST(TicTacBoardTest, gameNotOver)
 {
 	TicTacToeBoard ticTacToeBoard;
