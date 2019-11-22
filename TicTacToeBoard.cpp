@@ -97,9 +97,9 @@ Piece TicTacToeBoard::getWinner()
   else if (board[0][2] == board[1][1] && board[1][1] == board[2][0])
     return board[0][2];
   
-  for(int i=0; i<BOARDSIZE; i++)
+  for(int i=0; i<3; i++)
   {
-    for(int j=0; j<BOARDSIZE; j++)
+    for(int j=0; j<3; j++)
     {
       if (board[i][j] == Blank)
       {
