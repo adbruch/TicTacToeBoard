@@ -74,26 +74,26 @@ TEST(TicTacBoardTest, placePieceExisting)
 }
 //-------------------------------------------------------------------------------------------------------
 //getPiece tests
-TEST(TicTacBoardTest, getPiece0_0X)
+TEST(TicTacBoardTest, getPiece0_0Blank)
 {
 	TicTacToeBoard ticTacToeBoard;
 	ASSERT_EQ( ticTacToeBoard.getPiece(0,0), Blank);
 }
 
-TEST(TicTacBoardTest, getPieceCenterX)
+TEST(TicTacBoardTest, getPieceCenterBlank)
 {
 	TicTacToeBoard ticTacToeBoard;
 	ASSERT_EQ( ticTacToeBoard.getPiece(1,1), Blank);
 }
 
-TEST(TicTacBoardTest, getPiece0_0O)
+TEST(TicTacBoardTest, getPiece0_0X)
 {
 	TicTacToeBoard ticTacToeBoard;
 	ticTacToeBoard.placePiece(0,0);
 	ASSERT_EQ( ticTacToeBoard.getPiece(0,0), X);
 }
 
-TEST(TicTacBoardTest, getPieceCenterO)
+TEST(TicTacBoardTest, getPieceCenterX)
 {
 	TicTacToeBoard ticTacToeBoard;
 	ticTacToeBoard.placePiece(1,1);
@@ -110,6 +110,7 @@ TEST(TicTacBoardTest, getPiece0_0X)
 {
 	TicTacToeBoard ticTacToeBoard;
 	ticTacToeBoard.placePiece(0,0);
+	ticTacToeBoard.placePiece(1,1);
 	ASSERT_EQ( ticTacToeBoard.getPiece(0,0), X);
 }
 
@@ -117,7 +118,8 @@ TEST(TicTacBoardTest, getPieceCenterX)
 {
 	TicTacToeBoard ticTacToeBoard;
 	ticTacToeBoard.placePiece(0,0);
-	ASSERT_EQ( ticTacToeBoard.getPiece(0,0), X);
+	ticTacToeBoard.placePiece(1,1);
+	ASSERT_EQ( ticTacToeBoard.getPiece(1,1), O);
 }
 //-----------------------------------------------------------
 //getWinner tests
