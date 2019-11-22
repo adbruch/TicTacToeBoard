@@ -101,7 +101,7 @@ Piece TicTacToeBoard::getWinner()
   {
     for(int j=0; j<3; j++)
     {
-      if (board[i][j] == Blank)
+      if (board[i][j] == ' ')
       {
         return Invalid; 
       }
