@@ -141,6 +141,7 @@ TEST(TicTacBoardTest, WinnerO)
 	ticTacToeBoard.placePiece(0,0); //O in upper left corner
 	ticTacToeBoard.placePiece(1,1);
 	ticTacToeBoard.placePiece(0,1); //O in middle left	
+	ticTacToeBoard.placePiece(1,2);	
 	ticTacToeBoard.placePiece(0,2); //O in the bottom left
 	ASSERT_EQ( ticTacToeBoard.getWinner(), O);
 }
