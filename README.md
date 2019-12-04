@@ -1,6 +1,8 @@
 [![Build Status](https://travis-ci.org/adbruch/TicTacToeBoard.svg?branch=master)](https://travis-ci.org/adbruch/TicTacToeBoard)
 # TicTacToeBoard
 
+[![Coverage Status](https://coveralls.io/repos/github/adbruch/TicTacToeBoard/badge.svg?branch=master)](https://coveralls.io/github/adbruch/TicTacToeBoard?branch=master)
+
 ## Associated Enumerated Types
 `Piece` has four possible values: `X`,`O`,`Invalid`, and `Blank`
 
