@@ -145,6 +145,29 @@ TEST(TicTacBoardTest, WinnerX)
 	ticTacToeBoard.placePiece(0,2); //X in the bottom left
 	ASSERT_EQ( ticTacToeBoard.getWinner(), X);
 }
+//win horizontal second line
+TEST(TicTacBoardTest, WinnerX2)
+{
+	TicTacToeBoard ticTacToeBoard;
+	ticTacToeBoard.placePiece(1,0); //X in upper left corner
+	ticTacToeBoard.placePiece(1,0);
+	ticTacToeBoard.placePiece(1,1); //X in middle left
+	ticTacToeBoard.placePiece(2,2);
+	ticTacToeBoard.placePiece(1,2); //X in the bottom left
+	ASSERT_EQ( ticTacToeBoard.getWinner(), X);
+}
+
+//win horizontal second line
+TEST(TicTacBoardTest, WinnerX3)
+{
+	TicTacToeBoard ticTacToeBoard;
+	ticTacToeBoard.placePiece(2,0); //X in upper left corner
+	ticTacToeBoard.placePiece(1,0);
+	ticTacToeBoard.placePiece(2,1); //X in middle left
+	ticTacToeBoard.placePiece(2,0);
+	ticTacToeBoard.placePiece(2,2); //X in the bottom left
+	ASSERT_EQ( ticTacToeBoard.getWinner(), X);
+}
 
 TEST(TicTacBoardTest, WinnerO)
 {
@@ -168,6 +191,28 @@ TEST(TicTacBoardTest, VerticalWin)
 	ticTacToeBoard.placePiece(2,0);
 	ASSERT_EQ( ticTacToeBoard.getWinner(), X);
 }
+
+TEST(TicTacBoardTest, VerticalWin2)
+{
+	TicTacToeBoard ticTacToeBoard;
+	ticTacToeBoard.placePiece(0,1);
+	ticTacToeBoard.placePiece(0,0); //O in upper left corner
+	ticTacToeBoard.placePiece(1,1);
+	ticTacToeBoard.placePiece(0,1); //O in middle left	
+	ticTacToeBoard.placePiece(2,1);
+	ASSERT_EQ( ticTacToeBoard.getWinner(), X);
+}
+
+TEST(TicTacBoardTest, VerticalWin3)
+{
+	TicTacToeBoard ticTacToeBoard;
+	ticTacToeBoard.placePiece(0,2);
+	ticTacToeBoard.placePiece(0,0); //O in upper left corner
+	ticTacToeBoard.placePiece(1,2);
+	ticTacToeBoard.placePiece(0,1); //O in middle left	
+	ticTacToeBoard.placePiece(2,2);
+	ASSERT_EQ( ticTacToeBoard.getWinner(), X);
+}
 TEST(TicTacBoardTest, WinnerDiagonal)
 {
 	TicTacToeBoard ticTacToeBoard;
@@ -176,6 +221,17 @@ TEST(TicTacBoardTest, WinnerDiagonal)
 	ticTacToeBoard.placePiece(1,1);
 	ticTacToeBoard.placePiece(0,1); //O in middle left	
 	ticTacToeBoard.placePiece(2,2);	
+	ASSERT_EQ( ticTacToeBoard.getWinner(), X);
+}
+
+TEST(TicTacBoardTest, WinnerDiagonal2)
+{
+	TicTacToeBoard ticTacToeBoard;
+	ticTacToeBoard.placePiece(0,2);
+	ticTacToeBoard.placePiece(0,0); //O in upper left corner
+	ticTacToeBoard.placePiece(1,1);
+	ticTacToeBoard.placePiece(0,1); //O in middle left	
+	ticTacToeBoard.placePiece(2,0);	
 	ASSERT_EQ( ticTacToeBoard.getWinner(), X);
 }
 
